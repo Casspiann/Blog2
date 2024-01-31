@@ -13,3 +13,8 @@ Our blog has <%= Article.public_count %> articles and counting!
 </ul>
 
 <%= link_to "New Article", new_article_path %>
+
+<li><%= link_to "Log out", destroy_user_session_path, data: {
+  turbo_method: :delete,
+  turbo_confirm: "Are you sure?"
+} %></li>
